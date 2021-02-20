@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    header {
+        display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 50px 15px 15px;
+
+      input {
+        width: 100%;
+        max-width: 280px;
+        padding: 10px 15px;
+        border: none;
+        outline: none;
+        background-color: rgba(255, 255, 255, 0.3);
+        border-radius: 16px ;
+        
+        color: #313131;
+        font-size: 20px;
+        font-weight: 300;
+        transition: 0.2s ease-out;
+      }
+    }
+
+    .main-content {
+        flex: 1 1 100%;
+        padding: 25px 25px 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        .location {
+            position: relative;
+            text-transform: uppercase;
+            color: #FFF;
+            font-size: 32px;
+            font-weight: 500;
+            margin-bottom: 5px;
+            
+        }.location::after {
+            content: ' ';
+            position: absolute;
+            top: 100%;
+            bottom: -10%;
+            left: 0;
+            width: 100%;
+            border-bottom: 1px solid white;
+        }
+
+        .card {
+            width: 50%;
+            line-height: 5;
+            background-color: rgba(49, 49, 49, 0.4);
+            min-height: 270px;
+            border-color: #313131;
+            @media (min-width: 940px) {
+                width: 50%;
+            }
+            @media (min-width: 360px) and (max-width:940px) {
+                width: 100%;
+            }
+            .temp {
+                color: #FFF;
+                font-size: 45px;
+            }
+            .weather-wrapper {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: row;
+                img {
+                    min-width: 100px;
+                }
+                
+                p {
+                    color: white;
+                    text-transform: capitalize;
+                }
+
+            }
+
+            .date {
+                color: white;
+            }
+        }
+    }
+}
+
+
